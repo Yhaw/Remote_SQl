@@ -50,7 +50,7 @@ app.get('/users', (req, res) => {
   });
 });
 
-app.post('/users', (req, res) => {
+app.post('/input_users', (req, res) => {
   const { name, number, amount } = req.body;
   pool.getConnection((err, connection) => {
     if (err) throw err;
