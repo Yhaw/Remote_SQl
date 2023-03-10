@@ -17,11 +17,9 @@ const dbConfig = {
   database: process.env.database
 };
 
-// Create a pool of connections to the database
-const pool = mysql.createPool(dbConfig);
+ const pool = mysql.createPool(dbConfig);
 
-// Connect to the database
-pool.getConnection((err, connection) => {
+ pool.getConnection((err, connection) => {
   if (err) {
     console.error('Error connecting to database:', err);
     process.exit(1);
